@@ -12,7 +12,8 @@ pipeline {
             steps {
                 sh 'cat /etc/alpine-release'
             }
-        stage('Foo') {
+	   } 
+        stage('date') {
  		 steps {
     		  script {
         	  def now = new Date()
