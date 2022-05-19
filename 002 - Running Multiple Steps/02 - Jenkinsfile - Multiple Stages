@@ -4,6 +4,7 @@ pipeline {
 			image 'alpine:latest' 
 		}
 	}
+   stages {
     stages('Cenas') {
     	steps {
 	sh 'date > result.txt'
@@ -11,4 +12,6 @@ pipeline {
 	sh 'date >> result.txt'
 	sh 'cat result.txt'
     }
+   }
+  }
 }
